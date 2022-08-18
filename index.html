@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car</title>
+      <link rel="stylesheet" href="car.css">  
+   
+    
+</head>
+<body >
+    
+<div class="hero" id="bg" >
+
+    <div class="plane"><img src="plane3.png" alt="" onmouseover="light()" onmouseout="dark()"></div>
+<div class="city" id="city"></div>
+
+<div class="highway" id="highway"></div>
+<div class="car" id="car" onmouseover="stop()" onmouseout="start()">
+    <img src="car.png" alt="">
+    <div class="ship">Made by : HUNAIN AYAZ</div>
+</div> 
+<div class="wheel" id="wheel" onmouseover="stop()" onmouseout="start()">
+    <img src="wheel.png" id="back">
+    <img src="wheel.png" id="front">
+</div>
+
+<div class="car3" id="car" onmouseover="stop()" onmouseout="start()">
+    <img src="car3.png" alt="">
+    <div class="wheel2" id="wheel2" onmouseover="stop()" onmouseout="start()">
+        <img src="wheel 2.png" id="back">
+        <img src="wheel 2.png" id="front">
+    </div>
+    
+</div>
+
+
+<script>
+    function stop(){
+       
+      
+        document.getElementById('back').style.animation = "wheel 0s linear infinite";
+        document.getElementById('front').style.animation = "wheel 0s linear infinite";
+        document.getElementById('city').style.animation = "city 0s linear infinite";
+        document.getElementById('highway').style.animation = "highway 0s linear infinite";
+      
+      
+
+        
+
+       }
+       function start(){
+       
+      
+        document.getElementById('back').style.animation = "wheel 1s linear infinite";
+        document.getElementById('front').style.animation = "wheel 1s linear infinite";
+       
+        document.getElementById('city').style.animation = "city 20s linear infinite";
+        document.getElementById('highway').style.animation = "highway 5s linear infinite";
+      
+       }
+
+       function dark(){
+        document.getElementById('bg').style.backgroundImage = "url('night sky.jpg')";
+
+       }
+       function light()
+       {
+        document.getElementById('bg').style.backgroundImage = "url('sky.jpg')";
+
+       }
+  
+</script>
+</body>
+</html>
